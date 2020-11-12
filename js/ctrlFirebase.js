@@ -8,6 +8,16 @@ function verificarUsuario() {
             }
         } else {
             // No user is signed in.
+            window.location.replace("index.html");
+        }
+    });
+}
+
+function verificarSesion() {
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (!user) {
+            // No user is signed in.
+            window.location.replace("index.html");
         }
     });
 }
