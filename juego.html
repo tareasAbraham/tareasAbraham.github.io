@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <title>Covid-rama</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina web sobre los filosofos nihilistas">
+    <meta name="author" content="Abraham Rivera">
+    <link rel="stylesheet" href="css/estilos.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+    <script type="module" src="cmp/piePagina.js"></script>
+    <script type="module" src="cmp/menu.js"></script>
+</head>
+
+<body>
+    <menu-pagina></menu-pagina>
+    <!-- Contenido -->
+    <br><br>
+    <div class="fila2">
+        <div id="contenedor" class="limpiador">
+            <div class="fondo ">
+                <!-- Contenido Principal -->
+                <h1>Puntuacion:<span id="puntuacionFinal"></span></h1>
+                <h3>Numero de aciertos:<span id="numeroAciertos"></span></h3>
+                <h3>Numero de fallos:<span id="numeroFallos"></span></h3>
+                <div class="grid" id="grid">
+                </div>
+                <div class="centrar">
+                    <div id="resultado">
+                    </div>
+                    <br>
+                    <button class="btn boton" onclick="reiniciarJuego()">Reiniciar</button>
+                    <button class="btn boton" onclick="verPuntajes()">Ver puntajes</button>
+                    <button class="btn boton" onclick="cerrarSesion()">Cerrar Sesion</button>
+                    <button class="btn boton" onclick="verInstrucciones()">Instrucciones</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <pie-pagina></pie-pagina>
+    <!-- / Contenido Principal -->
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDPkdHQymoKSG_ka7HAsKkiQHMPme0C4aM",
+            authDomain: "covid-rama-cea91.firebaseapp.com",
+            databaseURL: "https://covid-rama-cea91.firebaseio.com",
+            projectId: "covid-rama-cea91",
+            storageBucket: "covid-rama-cea91.appspot.com",
+            messagingSenderId: "352039329940",
+            appId: "1:352039329940:web:f1748879a41b23d52a9481",
+            measurementId: "G-5EZD4LDK6V"
+        };
+        firebase.initializeApp(config);
+        // Get a reference to the database service
+        var database = firebase.database();
+    </script>
+    <script src="js/ctrlMemorama.js" charset="utf-8"></script>
+    <script src="js/ctrlFirebase.js" charset="utf-8"></script>
+</body>
+
+</html>

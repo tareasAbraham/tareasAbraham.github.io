@@ -1,0 +1,201 @@
+/*---------------------------------------------- Estilos globales -------------------------------------*/
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    background-image: url('https://i.pinimg.com/originals/be/4d/6a/be4d6ada3ee281a43be9a5df4764c09b.jpg');
+    font-size: 20px;
+    text-align: justify;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Press Start 2P';
+}
+
+.limpiador:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    color: rgba(255, 255, 255, 0);
+}
+
+.limpiador {
+    display: block;
+    clear: both;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+
+/* ----------------------------------------------Envoltorios-------------------------------------*/
+
+.fila1,
+.fila1 a {
+    color: deepskyblue;
+    background-color: #5bd3d0;
+    -webkit-text-stroke: 0.5px white;
+    padding-top: 10px;
+}
+
+.fila2 {
+    color: black;
+}
+
+
+/*----------------------------------------------cabecera-------------------------------------*/
+
+#cabecera nav {
+    display: block;
+    float: right;
+    margin: 17px 0 0 0;
+    padding: 20px 0;
+    color: #FF3D00;
+    background-color: #5bd3d0;
+}
+
+.mas {
+    color: #FF3D00;
+    float: right;
+    font-weight: bold;
+}
+
+
+/*----------------------------------------------Area del contenido-------------------------------------*/
+
+#contenedor section {
+    display: block;
+    width: 100%;
+    margin: 0 0 50px 0;
+}
+
+
+/* ------Contenido Principal-----*/
+
+.fondo-oscuro {
+    background: #232323;
+}
+
+.fl_izq {
+    float: left;
+}
+
+.fl_der {
+    float: right;
+}
+
+.logoMenu {
+    font-family: 'Press Start 2P';
+    font-size: 60px;
+    font-weight: bold;
+}
+
+
+/*----------------------------------------------Footer-------------------------------------*/
+
+.visitado {
+    color: black;
+    background-color: #5bd3d0;
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#content-wrap {
+    padding-bottom: 2.5rem;
+    /* Footer height */
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 98%;
+    /* Footer height */
+    color: black;
+    background-color: #5bd3d0;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.fondo {
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    padding: 50px 100px 10px 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.fondoInstrucciones {
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    padding: 50px 100px 10px 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-family: 'Arial';
+    font-size: 25px;
+}
+
+.boton {
+    border-color: #5bd3d0;
+    color: #fff;
+    background-color: rgb(79, 138, 84);
+    background-image: linear-gradient(45deg, #5bd3d0 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+    width: 150px;
+    height: 60px;
+    font-size: 20px;
+}
+
+.boton:hover {
+    font-weight: bold;
+    background-position: 0;
+    font-size: 20px;
+}
+
+.centrar {
+    text-align: center;
+    padding: 30px;
+}
+
+td {
+    text-align: center;
+    width: 200px;
+    border: 1px black;
+    padding: 10px;
+}
+
+.form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #ffffff;
+    width: 100%;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
