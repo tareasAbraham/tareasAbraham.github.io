@@ -7,6 +7,6 @@ Este videojuego online va dirigido hacia los niños de 3 años en adelante con e
 En el front-end se utilizo html, css y javascript puro, sin ningun uso de librerias o frameworks
 En el back-end se utilizo firebase
 
-Solo se puede acceder al juego mediante las cuentas previamente registradas, y aunque no hayas iniciado sesion y conozcas la url exacta del juego, la pagina te redireccionara al index.
+Solo se puede acceder al juego mediante las cuentas previamente registradas, y aunque no hayas iniciado sesion y conozcas la url exacta del juego, la pagina te redireccionara al index si intentas entrar sin haber iniciado sesion.
 
 El memorama guarda la informacion de los fallos, aciertos y puntuacion del videojuego, las instrucciones y detalles, se encuentra en el apartado de Instrucciones dentro de la pagina web.
