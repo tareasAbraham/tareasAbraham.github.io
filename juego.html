@@ -30,10 +30,10 @@
                     <div id="resultado">
                     </div>
                     <br>
-                    <button class="btn boton" onclick="reiniciarJuego()">Reiniciar</button>
-                    <button class="btn boton" onclick="verPuntajes()">Ver puntajes</button>
-                    <button class="btn boton" onclick="cerrarSesion()">Cerrar Sesion</button>
-                    <button class="btn boton" onclick="verInstrucciones()">Instrucciones</button>
+                    <button class="btn boton" id="reiniciar">Reiniciar</button>
+                    <button class="btn boton" onclick="verPuntajes()" id="puntaje">Ver puntajes</button>
+                    <button class="btn boton" onclick="cerrarSesion()" id="cerrSesion">Cerrar Sesion</button>
+                    <button class="btn boton" onclick="verInstrucciones()" id="instrucciones">Instrucciones</button>
                 </div>
             </div>
         </div>
@@ -43,8 +43,8 @@
     <!-- / Contenido Principal -->
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
     <script src="js/inicializarFirebase.js"></script>
-    <script src="js/ctrlMemorama.js" charset="utf-8"></script>
-    <script src="js/ctrlFirebase.js" charset="utf-8"></script>
+    <script type="module" src="js/ctrlMemorama.js"></script>
+    <script src="js/ctrlFirebase.js"></script>
     <script>
         verificarSesion()
     </script>

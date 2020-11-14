@@ -1,3 +1,5 @@
+import { guardarPuntuacion } from "./daoMemorama.js";
+
 document.addEventListener('DOMContentLoaded', () => {
     // Se crea un arreglo de las imagenes que estaran en el memorama, y se duplican por que cada carta debe tener su par
     const cardArray = [{
@@ -148,6 +150,11 @@ document.addEventListener('DOMContentLoaded', () => {
     crearTablero()
 })
 
+// al ser el archivo js un modulo, necesitamos dar funcionalidad por medio de ID a los botones
+document.getElementById("reiniciar").addEventListener("click", reiniciarJuego);
+document.getElementById("puntaje").addEventListener("click", verPuntajes);
+document.getElementById("instrucciones").addEventListener("click", verInstrucciones);
+
 // Recargamos la pagina para que el juego pueda volver a comenzar
 function reiniciarJuego() {
     location.reload();
@@ -159,33 +166,4 @@ function verPuntajes() {
 // Redirigimos a la pagina de las puntuaciones
 function verInstrucciones() {
     window.location.replace("instrucciones.html");
-}
-
-//Cuando se haya ganado el juego, vamos a guardar su puntuacion en la bd
-function guardarPuntuacion(puntuacion, numeroFallos, numeroAciertos) {
-    firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
-            // Se obtiene el usuario actual
-            var user = firebase.auth().currentUser;
-            // Se obtiene el id de un nuevo registro, pero sin agregar el registro aun en la bd
-            const ref = firebase.database().ref("Usuario/" + user.uid + "/Puntuaciones").push();
-            // El id obtenido del nuevo registro, lo asignamos a una variable
-            var keyReceta = ref.key;
-            // Se crea un modelo de datos a guardar
-            const modelo = { id: keyReceta, Puntuacion: puntuacion, NumeroFallos: numeroFallos, NumeroAciertos: numeroAciertos, Fecha: obtenerFechaActual() };
-            // Al registro creado, se le coloca el modelo de datos y ahora si, se aplica a la bd
-            ref.set(modelo);
-        } else {
-            // El usuario no inicio sesion
-        }
-    });
-}
-
-// Obtenemos la fecha actual en milisegundos y lo convertimos a una fecha en string
-function obtenerFechaActual() {
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0');
-    var yyyy = today.getFullYear();
-    return today = mm + '/' + dd + '/' + yyyy;
 }
